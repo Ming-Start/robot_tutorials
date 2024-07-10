@@ -6,6 +6,7 @@ catkin_package()
 
 catkin_install_python(PROGRAMS
   scripts/move_viewpoints.py
+  scripts/target_reach.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
