@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<robot name="simple_table">
+  <link name="table_top">
+    <visual>
+      <geometry>
+        <box size="1.0 0.5 0.05"/>
+      </geometry>
+      <material name="grew">
+        <color rgba="1 0 0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="1.0 0.5 0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <link name="table_leg1">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.7"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.7"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="joint_leg1" type="fixed">
+    <parent link="table_top"/>
+    <child link="table_leg1"/>
+    <origin xyz="0.4 0.2 -0.35" rpy="0 0 0"/>
+  </joint>
+
+  <link name="table_leg2">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.7"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.7"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="joint_leg2" type="fixed">
+    <parent link="table_top"/>
+    <child link="table_leg2"/>
+    <origin xyz="-0.4 0.2 -0.35" rpy="0 0 0"/>
+  </joint>
+
+  <link name="table_leg3">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.7"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.7"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="joint_leg3" type="fixed">
+    <parent link="table_top"/>
+    <child link="table_leg3"/>
+    <origin xyz="0.4 -0.2 -0.35" rpy="0 0 0"/>
+  </joint>
+
+  <link name="table_leg4">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.7"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.7"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="joint_leg4" type="fixed">
+    <parent link="table_top"/>
+    <child link="table_leg4"/>
+    <origin xyz="-0.4 -0.2 -0.35" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Make the box static -->
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+</robot>

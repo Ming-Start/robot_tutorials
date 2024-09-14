@@ -21,4 +21,10 @@
                izz="0.003879257" />
     </inertial>
   </link>
+
+  <!-- Make the box static -->
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+  
 </robot>

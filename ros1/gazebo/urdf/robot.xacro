@@ -64,7 +64,7 @@
   </joint>
 
   <!-- Robot mounted kinect -->
-  <xacro:sensor_kinect
+  <!-- <xacro:sensor_kinect
     parent="tool0"
     cam_px="0.1"
     cam_py="-0.1"
@@ -72,6 +72,6 @@
     cam_or="0"
     cam_op="${-pi/2}"
     cam_oy="${pi/2}"
-  />
+  /> -->
 
 </robot>
